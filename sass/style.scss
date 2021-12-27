@@ -12,7 +12,7 @@ body{
     font-family: Roboto;
 }
 .title
-.title_page
+{&--page
 {
 @include flexbox-center
 }
@@ -20,6 +20,7 @@ body{
 @include flexbox-center;
 &--img
 {width: 60%;}
+}
 }
 
 .localisation{
@@ -32,4 +33,8 @@ box-shadow: 0 -5px 6px -5px #333;
 margin-top: 20px;
 &--icone
 {padding-right: 10px;}
+}
+.header--bloc{
+background: $header-color;
+height: 100ù;
 }
