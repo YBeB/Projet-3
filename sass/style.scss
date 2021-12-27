@@ -1,2 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Shrikhand&display=swap');
+@mixin flexbox-center {display: flex;
+    justify-content: center;
+}
+body{
+    font-family: Roboto;
+}
+.title_page
+{
+@include flexbox-center
+}
+.logo--header{
+@include flexbox-center;
+&--img
+{width: 60%;}
+}
 
+.localisation{
+display: flex;
+justify-content: center;
+align-items: center;
 
+}
