@@ -5,11 +5,13 @@
 $color-primary: #9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
-$header-color:#eaeaea;
+$header-color:#f6f6f6;
+
 
 body{
     font-family: Roboto;
 }
+.title
 .title_page
 {
 @include flexbox-center
@@ -24,9 +26,10 @@ body{
 display: flex;
 justify-content: center;
 align-items: center;
-background:$header-color;
+background: darken($header-color,12%);
 font-weight: 500;
 box-shadow: 0 -5px 6px -5px #333;
+margin-top: 20px;
 &--icone
 {padding-right: 10px;}
 }
