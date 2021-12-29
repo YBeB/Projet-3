@@ -61,7 +61,7 @@ body {
   color: white;
   font-weight: 500;
   font-size: 13px;
-  width: 60%;
+  width: 55%;
 }
 
 .howitworks {
@@ -202,5 +202,64 @@ a:link {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.dishes_top {
+  margin-bottom: 15px;
+}
+
+.dishes_top h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-bottom: 4px solid #99E2D0;
+  width: 16%;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.menu {
+  background: #f2f2f2;
+}
+
+.menu .case_dishes {
+  line-height: 1px;
+  border: 1px transparent;
+  font-size: 16px;
+  padding: 2px 2px 0px 10px;
+  border-radius: 10px;
+  margin-bottom: 13px;
+  background: white;
+  -webkit-box-shadow: 2px 0px 5px 0px #6b6b6b;
+          box-shadow: 2px 0px 5px 0px #6b6b6b;
+}
+
+.menu .case_dishes .Price_and_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+}
+
+.menu .case_dishes .Price_and_description .price {
+  font-weight: bold;
+}
+
+.command {
+  border: 1px transparent;
+  border-radius: 999px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #FF79DA), to(#9356DC));
+  background: linear-gradient(180deg, #FF79DA 5%, #9356DC 100%);
+  padding: 15px;
+  color: white;
+  font-weight: 500;
+  font-size: 13px;
+  width: 55%;
+  margin: 0% 0% 10% 20%;
 }
 /*# sourceMappingURL=style.css.map */

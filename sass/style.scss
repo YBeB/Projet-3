@@ -5,6 +5,11 @@
     justify-content: center;
 }
 
+@mixin flexbox-space {
+    display: flex;
+    justify-content: space-between;
+}
+
 @mixin background-linear {
     background: linear-gradient(180deg, $color-secondary 5%, $color-primary 100%);
 }
@@ -16,6 +21,15 @@
 @mixin box-shadow {
     box-shadow: 5px 0px 10px 0px rgb(107, 107, 107);
 }
+
+@mixin purple-button{border: 1px transparent;
+    @include shape-round;
+    @include background-linear;
+    padding: 15px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    width: 55%;}
 
 $color-primary: #9356DC;
 $color-secondary:#FF79DA;
@@ -60,14 +74,7 @@ body {
     padding: 0% 0% 10% 0%;
 
     &--text {
-        border: 1px transparent;
-        @include shape-round;
-        @include background-linear;
-        padding: 15px;
-        color: white;
-        font-weight: 500;
-        font-size: 13px;
-        width: 60%;
+        @include purple-button
     }
 }
 
@@ -136,8 +143,7 @@ body {
     }
 
     .description--case--heart {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox-space ;
         align-items: center;
 
         .fa-heart {
@@ -183,17 +189,60 @@ a:link {
     &--font {
         font-family: Shrikhand;
         font-size: 26px;
-        display: flex;
-        justify-content: space-between;
+        @include flexbox-space;
         width: 95%;
         padding-left: 7px;
-        
+
     }
 
     .img--top {
         width: 100%;
         height: 150px;
-        object-fit:cover;
-       }
+        object-fit: cover;
+    }
 
+}
+
+.dishes_top {
+    margin-bottom: 15px;
+
+    h2 {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 18px;
+        border-bottom: 4px solid $color-tertiary;
+        width: 16%;
+    }
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.menu {
+    background: darken(white, 5%);
+
+    .case_dishes {
+        line-height: 1px;
+        border: 1px transparent;
+        font-size: 16px;
+        padding: 2px 2px 0px 10px;
+        border-radius: 10px;
+        margin-bottom: 13px;
+        background: white;
+        box-shadow: 2px 0px 5px 0px rgb(107, 107, 107);
+
+        .Price_and_description {
+            @include flexbox-space;
+            font-size: 14px;
+
+            .price {
+                font-weight: bold;
+            }
+        }
+    }
+}
+.command
+{ @include purple-button;
+    margin: 0% 0% 10% 20%;
 }
