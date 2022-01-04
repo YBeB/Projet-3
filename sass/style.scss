@@ -22,14 +22,16 @@
     box-shadow: 5px 0px 10px 0px rgb(107, 107, 107);
 }
 
-@mixin purple-button{border: 1px transparent;
+@mixin purple-button {
+    border: 1px transparent;
     @include shape-round;
     @include background-linear;
     padding: 15px;
     color: white;
     font-weight: 500;
     font-size: 13px;
-    width: 55%;}
+    width: 210px;
+}
 
 $color-primary: #9356DC;
 $color-secondary:#FF79DA;
@@ -40,17 +42,22 @@ $header-color:#f6f6f6;
 body {
     font-family: Roboto;
 }
-
+.arrow
+{position: relative;
+top: 1px;
+right: 25%;
+}
 .title {
+
     &--page {
         @include flexbox-center;
+ 
     }
 
     .logo--header {
         @include flexbox-center;
-
         &--img {
-            width: 60%;
+            width: 150px;
         }
     }
 }
@@ -79,13 +86,16 @@ body {
 }
 
 .howitworks {
-    margin-bottom: 30%;
+    margin-bottom: 5%;
 }
 
 .steps {
     display: flex;
-    margin-bottom: 12%;
-    :hover {background: lighten($color-primary, $amount: 20);}
+    margin-bottom: 8%;
+
+    :hover {
+        background: lighten($color-primary, $amount: 20);
+    }
 
 
     &--text {
@@ -99,13 +109,15 @@ body {
         border-radius: 10px;
         height: 70%;
         width: 80%;
-        
+
         i {
             padding: 0px 15px 0px 15px;
         }
     }
-.fa-store:hover
-{color:$color-primary;}
+
+    .fa-store:hover {
+        color: $color-primary;
+    }
 
     &--number {
         position: relative;
@@ -148,7 +160,7 @@ body {
     }
 
     .description--case--heart {
-        @include flexbox-space ;
+        @include flexbox-space;
         align-items: center;
 
         .fa-heart {
@@ -158,28 +170,7 @@ body {
     }
 }
 
-footer {
-    padding-top: 20px;
-    background: #353535;
-    color: white;
-    padding-bottom: 10px;
 
-    img {
-        width: 40%;
-        padding-left: 20px;
-        filter: invert(100%);
-    }
-
-    ul {
-        list-style-type: none;
-        padding-left: 15px;
-
-        li {
-            padding: 0px 0px 5px 10px
-        }
-    }
-
-}
 
 a:visited {
     color: black;
@@ -195,7 +186,7 @@ a:link {
         position: relative;
         width: 100%;
         height: 300px;
-        z-index:-1;
+        z-index: -1;
         object-fit: cover;
     }
 
@@ -221,11 +212,15 @@ section {
     border-radius: 50px 50px 0px 0px;
     background: darken(white, 5%);
     margin-top: -60px;
-    &-font{        font-family: Shrikhand;
-    font-size: 22px;
-    @include flexbox-space;
-    width: 85%;
-    padding: 5%;}
+
+    &-font {
+        font-family: Shrikhand;
+        font-size: 22px;
+        @include flexbox-space;
+        width: 85%;
+        padding: 5%;
+    }
+
     .case_dishes {
         line-height: 1px;
         border: 1px transparent;
@@ -246,7 +241,127 @@ section {
         }
     }
 }
-.command
-{ @include purple-button;
-    margin: 0% 0% 10% 20%;
+
+footer {
+    padding-top: 20px;
+    background: #353535;
+    color: white;
+    padding-bottom: 10px;
+
+    img {
+        width: 100px;
+        padding-left: 20px;
+        filter: invert(100%);
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 15px;
+
+        li {
+            padding: 0px 0px 5px 10px
+        }
+    }
+
+    a[href^="mailto:"] {
+        color: white;
+        text-decoration: none;
+    }
+
 }
+
+
+.command {
+    @include purple-button;
+    margin-bottom: 5%;
+}
+.command-button
+{display: flex;
+justify-content: center;}
+
+$breakpoint-tablet:768px;
+$breakpoint-pc:991px;
+
+@media (min-width:$breakpoint-tablet) {
+    .title {
+
+        .logo--header {
+            @include flexbox-center;
+
+            &--img--accueil {
+                width: 30%;
+            }
+        }
+    }
+
+    .steps--text {
+
+        height: 30%;
+        width: 80%;
+    }
+
+
+}
+
+@media (min-width:$breakpoint-pc) {
+    .howitworks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Big-steps-f {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .steps {
+        margin-bottom: 2%;
+
+        &--text {
+            font-size: 18px;
+            padding: 3% 0% 3% 3%;
+            height: 70%;
+            width: 100%;
+        }
+    }
+
+    .Restaurants {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .all-restau {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .case_restau {
+        width: 35%;
+        margin: 10px;
+
+    }
+
+footer{
+ul{display: flex;
+justify-content: space-around;}
+    }
+
+    .menu{display: flex;
+    flex-direction: column;
+&--pc{display: flex;
+justify-content: space-evenly;}
+.case_dishes{
+width: 300px;
+h2{ font-size: 5px;}
+}
+
+.command-button
+{display: flex;
+justify-content: center;}
+}
+}
+
