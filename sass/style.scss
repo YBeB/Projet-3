@@ -39,6 +39,7 @@ $color-tertiary:#99E2D0;
 $header-color:#f6f6f6;
 
 
+
 body {
     font-family: Roboto;
 }
@@ -90,9 +91,7 @@ right: 25%;
     text-align: center;
     padding: 0% 0% 10% 0%;
 
-    &--text {
-        @include purple-button
-    }
+
 }
 
 .howitworks {

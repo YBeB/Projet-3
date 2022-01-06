@@ -79,6 +79,10 @@ a:link {
   width: 210px;
 }
 
+.header--bloc--text :hover {
+  background: #c9abee;
+}
+
 .howitworks {
   margin-bottom: 5%;
 }
