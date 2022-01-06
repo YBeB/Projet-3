@@ -3,6 +3,14 @@ body {
   font-family: Roboto;
 }
 
+a:visited {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 .arrow {
   position: relative;
   top: 1px;
@@ -170,14 +178,6 @@ body {
   color: #aaaaaa;
 }
 
-a:visited {
-  color: black;
-}
-
-a:link {
-  text-decoration: none;
-}
-
 .menu--tittle .img--top {
   position: relative;
   width: 100%;
@@ -338,11 +338,11 @@ footer a[href^="mailto:"] {
         justify-content: space-around;
   }
   .steps {
-    margin-bottom: 2%;
+    margin-bottom: 1%;
   }
   .steps--text {
     font-size: 18px;
-    padding: 3% 0% 3% 3%;
+    padding: 3% 0% 3% 1%;
     height: 70%;
     width: 100%;
   }

@@ -42,6 +42,15 @@ $header-color:#f6f6f6;
 body {
     font-family: Roboto;
 }
+
+a:visited {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
 .arrow
 {position: relative;
 top: 1px;
@@ -172,13 +181,7 @@ right: 25%;
 
 
 
-a:visited {
-    color: black;
-}
 
-a:link {
-    text-decoration: none;
-}
 
 .menu--tittle {
 
@@ -316,11 +319,11 @@ $breakpoint-pc:991px;
     }
 
     .steps {
-        margin-bottom: 2%;
+        margin-bottom: 1%;
 
         &--text {
             font-size: 18px;
-            padding: 3% 0% 3% 3%;
+            padding: 3% 0% 3% 1%;
             height: 70%;
             width: 100%;
         }
