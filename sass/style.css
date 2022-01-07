@@ -73,14 +73,18 @@ a:link {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA 5%, #9356DC 100%);
   padding: 15px;
-  color: white;
+  color: #fff;
   font-weight: 500;
   font-size: 13px;
   width: 210px;
+  -webkit-transition: background 1s;
+  transition: background 1s;
 }
 
-.header--bloc--text :hover {
-  background: #c9abee;
+.header--bloc--text:hover {
+  background: #ae80e5;
+  -webkit-box-shadow: 5px 1px 5px 1px #6b6b6b;
+          box-shadow: 5px 1px 5px 1px #6b6b6b;
 }
 
 .howitworks {
@@ -295,11 +299,19 @@ footer a[href^="mailto:"] {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA 5%, #9356DC 100%);
   padding: 15px;
-  color: white;
+  color: #fff;
   font-weight: 500;
   font-size: 13px;
   width: 210px;
   margin-bottom: 5%;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+.command:hover {
+  background: #ae80e5;
+  -webkit-box-shadow: 5px 1px 5px 1px #6b6b6b;
+          box-shadow: 5px 1px 5px 1px #6b6b6b;
 }
 
 .command-button {

@@ -10,13 +10,6 @@
     justify-content: space-between;
 }
 
-@mixin background-linear {
-    background: linear-gradient(180deg, $color-secondary 5%, $color-primary 100%);
-}
-
-@mixin shape-round {
-    border-radius: 999px;
-}
 
 @mixin box-shadow {
     box-shadow: 5px 0px 10px 0px rgb(107, 107, 107);
@@ -24,20 +17,21 @@
 
 @mixin purple-button {
     border: 1px transparent;
-    @include shape-round;
-    @include background-linear;
+    border-radius: 999px;
+    background:$gradient ;
     padding: 15px;
-    color: white;
+    color: #fff;
     font-weight: 500;
     font-size: 13px;
     width: 210px;
 }
 
+
 $color-primary: #9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $header-color:#f6f6f6;
-
+$gradient:linear-gradient(180deg, $color-secondary 5%, $color-primary 100%);
 
 
 body {
@@ -90,10 +84,16 @@ right: 25%;
     background: darken($header-color, 2%);
     text-align: center;
     padding: 0% 0% 10% 0%;
-
-
 }
 
+.header--bloc--text
+{@include purple-button;
+    transition: background 1s;
+}
+.header--bloc--text:hover{
+    background: lighten($color: $color-primary, $amount:10);
+    box-shadow: 5px 1px 5px 1px rgb(107, 107, 107);
+}
 .howitworks {
     margin-bottom: 5%;
 }
@@ -135,7 +135,7 @@ right: 25%;
         margin-top: 4%;
         color: white;
         background: $color-primary;
-        @include shape-round;
+        border-radius: 999px;
         font-size: 15px;
         text-align: center;
         width: 20px;
@@ -277,6 +277,11 @@ footer {
 .command {
     @include purple-button;
     margin-bottom: 5%;
+    transition: background 1s;
+}
+.command:hover{
+    background: lighten($color: $color-primary, $amount:10);
+    box-shadow: 5px 1px 5px 1px rgb(107, 107, 107);
 }
 .command-button
 {display: flex;
