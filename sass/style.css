@@ -310,8 +310,8 @@ footer a[href^="mailto:"] {
 
 .command:hover {
   background: #ae80e5;
-  -webkit-box-shadow: 5px 1px 5px 1px #6b6b6b;
-          box-shadow: 5px 1px 5px 1px #6b6b6b;
+  -webkit-box-shadow: 5px 1px 5px 1px #6b6b6a;
+          box-shadow: 5px 1px 5px 1px #6b6b6a;
 }
 
 .command-button {
