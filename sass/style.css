@@ -42,6 +42,32 @@
   }
 }
 
+@-webkit-keyframes apparation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes apparation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 body {
   font-family: Roboto;
 }
@@ -296,6 +322,10 @@ section {
   background: white;
   -webkit-box-shadow: 2px 0px 5px 0px #6b6b6b;
           box-shadow: 2px 0px 5px 0px #6b6b6b;
+  -webkit-animation: apparation 2s ease-in-out forwards;
+          animation: apparation 2s ease-in-out forwards;
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
 }
 
 .menu .case_dishes .Price_and_description {
