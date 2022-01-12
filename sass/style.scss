@@ -124,6 +124,7 @@ a:link {
 
     :hover {
         background: lighten($color-primary, $amount: 20);
+        i{color:lighten($color-primary, $amount: 5)}
     }
 
 
@@ -144,9 +145,7 @@ a:link {
         }
     }
 
-    .fa-store:hover {
-        color: $color-primary;
-    }
+
 
     &--number {
         position: relative;
@@ -328,7 +327,7 @@ height: 150px;
 position: relative;
 top:30%;
 margin: auto;
-animation: rotation  4s linear infinite ;
+animation: rotation  1s linear infinite ;
 }
 .Loader
 {

@@ -149,6 +149,10 @@ a:link {
   background: #c9abee;
 }
 
+.steps :hover i {
+  color: #a16be0;
+}
+
 .steps--text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,10 +171,6 @@ a:link {
 
 .steps--text i {
   padding: 0px 15px 0px 15px;
-}
-
-.steps .fa-store:hover {
-  color: #9356DC;
 }
 
 .steps--number {
@@ -381,8 +381,8 @@ footer a[href^="mailto:"] {
   position: relative;
   top: 30%;
   margin: auto;
-  -webkit-animation: rotation  4s linear infinite;
-          animation: rotation  4s linear infinite;
+  -webkit-animation: rotation  1s linear infinite;
+          animation: rotation  1s linear infinite;
 }
 
 .Loader {
