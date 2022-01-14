@@ -40,8 +40,8 @@
 z-index: 5;}
 100%{opacity: 0;z-index: -1;}
 }
-@keyframes apparation{0%{opacity: 0;
-    transform: translateY(20px);}
+@keyframes fadein{0%{opacity: 0;
+    transform: translateY(40px);}
 100%{opacity: 1;
     transform: translateY(0);}}
 $color-primary: #9356DC;
@@ -263,8 +263,8 @@ section {
         margin-bottom: 13px;
         background: white;
         box-shadow: 2px 0px 5px 0px rgb(107, 107, 107);
-        animation: apparation 2s ease-in-out forwards;
-        animation-delay: 150ms;
+        animation-name: fadein;
+        animation-duration:2s;
         .Price_and_description {
             @include flexbox-space;
             font-size: 14px;
@@ -275,6 +275,20 @@ section {
         }
     }
 }
+
+.case_dishes1{ 
+    animation-delay: 100ms;
+    animation-fill-mode: forwards;}
+.case_dishes2{  
+    animation-delay: 250ms;
+
+    animation-fill-mode: forwards;}
+.case_dishes3{  
+    animation-delay: 350ms;
+    animation-fill-mode: forwards;}
+.case_dishes4{
+    animation-delay: 450ms;
+    animation-fill-mode: forwards;}
 
 footer {
     padding-top: 20px;

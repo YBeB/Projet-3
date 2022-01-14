@@ -42,11 +42,11 @@
   }
 }
 
-@-webkit-keyframes apparation {
+@-webkit-keyframes fadein {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
   }
   100% {
     opacity: 1;
@@ -55,11 +55,11 @@
   }
 }
 
-@keyframes apparation {
+@keyframes fadein {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
   }
   100% {
     opacity: 1;
@@ -322,10 +322,10 @@ section {
   background: white;
   -webkit-box-shadow: 2px 0px 5px 0px #6b6b6b;
           box-shadow: 2px 0px 5px 0px #6b6b6b;
-  -webkit-animation: apparation 2s ease-in-out forwards;
-          animation: apparation 2s ease-in-out forwards;
-  -webkit-animation-delay: 150ms;
-          animation-delay: 150ms;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .menu .case_dishes .Price_and_description {
@@ -340,6 +340,34 @@ section {
 
 .menu .case_dishes .Price_and_description .price {
   font-weight: bold;
+}
+
+.case_dishes1 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.case_dishes2 {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.case_dishes3 {
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.case_dishes4 {
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 footer {
