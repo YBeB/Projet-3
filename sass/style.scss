@@ -265,6 +265,7 @@ section {
         box-shadow: 2px 0px 5px 0px rgb(107, 107, 107);
         animation-name: fadein;
         animation-duration:2s;
+        opacity: 0;
         .Price_and_description {
             @include flexbox-space;
             font-size: 14px;

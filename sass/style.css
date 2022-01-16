@@ -326,6 +326,7 @@ section {
           animation-name: fadein;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  opacity: 0;
 }
 
 .menu .case_dishes .Price_and_description {
