@@ -263,9 +263,83 @@ a:link {
           align-items: center;
 }
 
-.case_restau .description--case--heart .fa-heart {
+.case_restau .description--case--heart .icon-b {
   padding-right: 13px;
   color: #aaaaaa;
+}
+
+@-webkit-keyframes like {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    color: #9356DC;
+  }
+  30% {
+    opacity: 1;
+    scale: 0.75;
+    color: #9356DC;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    color: #9356DC;
+  }
+  to {
+    opacity: 1;
+    color: #9356DC;
+    -webkit-transform: scale(1.13);
+            transform: scale(1.13);
+  }
+}
+
+@keyframes like {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    color: #9356DC;
+  }
+  30% {
+    opacity: 1;
+    scale: 0.75;
+    color: #9356DC;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    color: #9356DC;
+  }
+  to {
+    opacity: 1;
+    color: #9356DC;
+    -webkit-transform: scale(1.13);
+            transform: scale(1.13);
+  }
+}
+
+.heartfull .icon-a {
+  position: relative;
+  bottom: 33px;
+  cursor: pointer;
+  opacity: 1;
+  color: transparent;
+}
+
+.heartfull .icon-a-page {
+  bottom: 47px;
+  left: 0.97;
+}
+
+.heartfull .icon-a:hover {
+  -webkit-animation: like 500ms linear;
+          animation: like 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: step-start;
+  transition: step-start;
 }
 
 .menu--tittle .img--top {
@@ -279,6 +353,13 @@ a:link {
 
 .dishes_top {
   margin-bottom: 15px;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .dishes_top h2 {
@@ -457,6 +538,7 @@ footer a[href^="mailto:"] {
           animation: endload 2s linear 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  display: none;
 }
 
 @media (min-width: 768px) {

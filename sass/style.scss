@@ -44,6 +44,8 @@ z-index: 5;}
     transform: translateY(40px);}
 100%{opacity: 1;
     transform: translateY(0);}}
+
+
 $color-primary: #9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
@@ -202,15 +204,45 @@ a:link {
         @include flexbox-space;
         align-items: center;
 
-        .fa-heart {
+        .icon-b {
             padding-right: 13px;
             color: darken($header-color, 30%);
+            
         }
     }
 }
 
+@keyframes like{
+from{opacity: 1;
+transform: scale(0.50);
+color:$color-primary}
+30%{opacity:1;
+scale: 0.75;
+color:$color-primary}
+50%{opacity:1;;
+transform:scale(1.5);
+color:$color-primary}
+to{opacity: 1 ;color:$color-primary;transform:scale(1.13);
+}
+}
 
 
+.heartfull
+{
+.icon-a {position: relative;
+    bottom: 33px;
+    cursor:pointer;
+    opacity: 1;
+    color: transparent;
+    &-page{bottom: 47px;
+    left:0.97;}
+}
+
+.icon-a:hover{animation:like 500ms linear ;
+    animation-fill-mode: forwards;
+    transition: step-start;}
+
+}
 
 
 .menu--tittle {
@@ -227,7 +259,10 @@ a:link {
 
 .dishes_top {
     margin-bottom: 15px;
-
+    animation-name: fadein;
+    animation-duration:2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
     h2 {
         font-weight: 400;
         text-transform: uppercase;
@@ -277,6 +312,8 @@ section {
     }
 }
 
+
+
 .case_dishes1{ 
     animation-delay: 100ms;
     animation-fill-mode: forwards;}
@@ -290,6 +327,8 @@ section {
 .case_dishes4{
     animation-delay: 450ms;
     animation-fill-mode: forwards;}
+
+
 
 footer {
     padding-top: 20px;
@@ -361,6 +400,7 @@ background: white;
 overflow: hidden;
 animation: endload 2s linear 3s  ;
 animation-fill-mode: forwards;
+display: none;
 }
 
 
