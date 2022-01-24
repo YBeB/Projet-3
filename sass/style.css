@@ -393,8 +393,12 @@ section {
   padding: 5%;
 }
 
+.menu .title_dishes {
+  width: 80%;
+}
+
 .menu .case_dishes {
-  line-height: 1px;
+  line-height: 1;
   border: 1px transparent;
   font-size: 16px;
   padding: 2px 1px 0px 10px;
@@ -413,6 +417,7 @@ section {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  height: 90px;
 }
 
 .menu .case_dishes .Price_and_description {
@@ -430,13 +435,40 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: end;
+}
+
+@-webkit-keyframes apparation {
+  from {
+    max-width: 0px;
+  }
+  to {
+    max-width: 80px;
+  }
+}
+
+@keyframes apparation {
+  from {
+    max-width: 0px;
+  }
+  to {
+    max-width: 80px;
+  }
 }
 
 .check {
   position: relative;
-  bottom: 15px;
-  left: 30px;
-  width: 0px;
+  bottom: 20px;
+  max-width: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: chartreuse;
+}
+
+.case_dishes:hover .check {
+  -webkit-animation: apparation 1s linear forwards;
+          animation: apparation 1s linear forwards;
 }
 
 .case_dishes1 {
@@ -536,8 +568,8 @@ footer a[href^="mailto:"] {
   position: relative;
   top: 30%;
   margin: auto;
-  -webkit-animation: rotation  1s linear infinite;
-          animation: rotation  1s linear infinite;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
 }
 
 .Loader {

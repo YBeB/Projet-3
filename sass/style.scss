@@ -28,22 +28,37 @@
 
 @keyframes rotation {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-    100%{
-      transform: rotate(360deg);
-    }
-  }
 
-@keyframes endload{
-0%{opacity: 1;
-z-index: 5;}
-100%{opacity: 0;z-index: -1;}
+    100% {
+        transform: rotate(360deg);
+    }
 }
-@keyframes fadein{0%{opacity: 0;
-    transform: translateY(40px);}
-100%{opacity: 1;
-    transform: translateY(0);}}
+
+@keyframes endload {
+    0% {
+        opacity: 1;
+        z-index: 5;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 $color-primary: #9356DC;
@@ -129,7 +144,10 @@ a:link {
 
     :hover {
         background: lighten($color-primary, $amount: 20);
-        i{color:lighten($color-primary, $amount: 5)}
+
+        i {
+            color: lighten($color-primary, $amount: 5)
+        }
     }
 
 
@@ -207,40 +225,58 @@ a:link {
         .icon-b {
             padding-right: 13px;
             color: darken($header-color, 30%);
-            
+
         }
     }
 }
 
-@keyframes like{
-from{opacity: 1;
-transform: scale(0.50);
-color:$color-primary}
-30%{opacity:1;
-scale: 0.75;
-color:$color-primary}
-50%{opacity:1;;
-transform:scale(1.5);
-color:$color-primary}
-to{opacity: 1 ;color:$color-primary;transform:scale(1.13);
-}
+@keyframes like {
+    from {
+        opacity: 1;
+        transform: scale(0.50);
+        color: $color-primary
+    }
+
+    30% {
+        opacity: 1;
+        scale: 0.75;
+        color: $color-primary
+    }
+
+    50% {
+        opacity: 1;
+        ;
+        transform: scale(1.5);
+        color: $color-primary
+    }
+
+    to {
+        opacity: 1;
+        color: $color-primary;
+        transform: scale(1.13);
+    }
 }
 
 
-.heartfull
-{
-.icon-a {position: relative;
-    bottom: 33px;
-    cursor:pointer;
-    opacity: 1;
-    color: transparent;
-    &-page{bottom: 47px;
-    left:0.97;}
-}
+.heartfull {
+    .icon-a {
+        position: relative;
+        bottom: 33px;
+        cursor: pointer;
+        opacity: 1;
+        color: transparent;
 
-.icon-a:hover{animation:like 500ms linear ;
-    animation-fill-mode: forwards;
-    transition: step-start;}
+        &-page {
+            bottom: 47px;
+            left: 0.97;
+        }
+    }
+
+    .icon-a:hover {
+        animation: like 500ms linear;
+        animation-fill-mode: forwards;
+        transition: step-start;
+    }
 
 }
 
@@ -260,9 +296,10 @@ to{opacity: 1 ;color:$color-primary;transform:scale(1.13);
 .dishes_top {
     margin-bottom: 15px;
     animation-name: fadein;
-    animation-duration:2s;
+    animation-duration: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
+
     h2 {
         font-weight: 400;
         text-transform: uppercase;
@@ -288,10 +325,10 @@ section {
         width: 85%;
         padding: 5%;
     }
-
+    .title_dishes{width: 80%;}
 
     .case_dishes {
-        line-height: 1px;
+        line-height: 1;
         border: 1px transparent;
         font-size: 16px;
         padding: 2px 1px 0px 10px;
@@ -300,41 +337,68 @@ section {
         background: white;
         box-shadow: 2px 0px 5px 0px rgb(107, 107, 107);
         animation-name: fadein;
-        animation-duration:2s;
+        animation-duration: 2s;
         opacity: 1;
-        animation-iteration-count:1;
+        animation-iteration-count: 1;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        height: 90px;
         .Price_and_description {
             @include flexbox-space;
             font-size: 14px;
-            &
-            .price {
+            & .price {
                 font-weight: bold;
                 display: flex;
+                justify-self: end;
             }
         }
     }
 }
-.check{position:relative;
-    bottom:15px;
-     left: 30px;
-    width: 0px;}
 
-.case_dishes1{ 
+@keyframes apparation {
+    from {
+        max-width: 0px;
+    }
+
+    to {
+        max-width: 80px;
+    }
+}
+
+.check {
+    position: relative;
+    bottom: 20px;
+    max-width: 0px;
+    display: flex;
+    background: chartreuse;
+}
+.case_dishes:hover {
+    .check {
+        animation: apparation 1s linear forwards
+    }
+}
+
+.case_dishes1 {
     animation-delay: 100ms;
-    animation-fill-mode: forwards;}
-.case_dishes2{  
+    animation-fill-mode: forwards;
+}
+
+.case_dishes2 {
     animation-delay: 250ms;
 
-    animation-fill-mode: forwards;}
-.case_dishes3{  
+    animation-fill-mode: forwards;
+}
+
+.case_dishes3 {
     animation-delay: 350ms;
-    animation-fill-mode: forwards;}
-.case_dishes4{
+    animation-fill-mode: forwards;
+}
+
+.case_dishes4 {
     animation-delay: 450ms;
-    animation-fill-mode: forwards;}
+    animation-fill-mode: forwards;
+}
 
 
 
@@ -382,32 +446,32 @@ footer {
     display: flex;
     justify-content: center;
 }
-.Loader-animation
-{
-border-top: $color-primary 7px solid;
- border-bottom: $color-tertiary 7px solid;
- border-left: $color-secondary 7px solid;
- border-right: $header-color 7px solid;
- border-radius:9999px;
-width: 150px;
-height: 150px;
-position: relative;
-top:30%;
-margin: auto;
-animation: rotation  1s linear infinite ;
+
+.Loader-animation {
+    border-top: $color-primary 7px solid;
+    border-bottom: $color-tertiary 7px solid;
+    border-left: $color-secondary 7px solid;
+    border-right: $header-color 7px solid;
+    border-radius: 9999px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 30%;
+    margin: auto;
+    animation: rotation 1s linear infinite;
 }
-.Loader
-{
-z-index: 2;
-position:fixed;
-top: 0px;
-bottom: 0px;
-width: 100%;
-height: 100%;
-background: white;
-overflow: hidden;
-animation: endload 2s linear 3s  ;
-animation-fill-mode: forwards;
+
+.Loader {
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+    animation: endload 2s linear 3s;
+    animation-fill-mode: forwards;
 }
 
 
