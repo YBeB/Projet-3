@@ -397,7 +397,7 @@ section {
   line-height: 1px;
   border: 1px transparent;
   font-size: 16px;
-  padding: 2px 2px 0px 10px;
+  padding: 2px 1px 0px 10px;
   border-radius: 10px;
   margin-bottom: 13px;
   background: white;
@@ -407,7 +407,12 @@ section {
           animation-name: fadein;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  opacity: 0;
+  opacity: 1;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu .case_dishes .Price_and_description {
@@ -422,6 +427,16 @@ section {
 
 .menu .case_dishes .Price_and_description .price {
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.check {
+  position: relative;
+  bottom: 15px;
+  left: 30px;
+  width: 0px;
 }
 
 .case_dishes1 {
@@ -538,7 +553,6 @@ footer a[href^="mailto:"] {
           animation: endload 2s linear 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  display: none;
 }
 
 @media (min-width: 768px) {
