@@ -411,7 +411,7 @@ section {
           animation-name: fadein;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   overflow: hidden;
