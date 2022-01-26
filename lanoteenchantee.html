@@ -5,32 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Lien du site FontAwesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--Feuille de style Sass-->
     <link rel="stylesheet" href="sass/style.css">
     <title>La note enchantée</title>
 </head>
 
 <body>
+    <!--Header contenant la fléche vers l'accueil-->
     <header>
         <div class="title title--page">
-            <a href="Accueil.html">
-                <div class=arrow><i class="fas fa-arrow-left"></i>
-            </a>
-        </div>
-        <div class=logo--header><img class=logo--header--img src="images/logo/ohmyfood.png"></div>
+            <div class=arrow><a href="Accueil.html"><i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            <div class=logo--header><img class=logo--header--img src="images/logo/ohmyfood.png" alt=""></div>
         </div>
     </header>
     <div class="menu--tittle">
-        <div class="menu--tittle--image"><img class="img--top" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+        <div class="menu--tittle--image"><img class="img--top" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="">
         </div>
     </div>
-
+    <!--Main contenant le menu-->
     <main class="menu">
-        <h1 class=menu-font>La note enchantée<div class=heart_menu>
-                <div class=heartmain><i class="far fa-heart fa-2x icon-b"></i></div>
-                <div class=heartfull><i class="fas fa-heart fa-2x icon-a icon-a-page "></i></div>
-            </div>
-        </h1>
+        <!--Coeur animé-->
+        <div class=heart_menu>
+            <h1 class=menu-font>La note enchantée</h1>
+            <div class=heartmain><i class="far fa-heart fa-2x icon-b"></i></div>
+            <div class=heartfull><i class="fas fa-heart fa-2x icon-a icon-a-page "></i></div>
+        </div>
+        <!--Menu avec 2 animation-->
         <div class="menu--pc">
             <section class="entrees">
                 <div class=dishes_top>
@@ -48,6 +53,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--Div utilisé pour l'animation de la coche verte-->
                     <div class="check">
                         <i class="fas fa-check-circle fa-2x" aria-hidden="true"></i>
                     </div>
@@ -219,8 +225,9 @@
             <button class="command">Commander</button>
         </div>
     </main>
+    <!--Le footer contenant le lien "contact"-->
     <footer>
-        <img src="images/logo/ohmyfood@2x.svg">
+        <img src="images/logo/ohmyfood@2x.svg" alt="">
         <ul>
             <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
             <li><i class="fas fa-handshake"></i>Devenir partenaire</li>

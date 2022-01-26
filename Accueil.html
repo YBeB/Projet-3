@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil</title>
+  <!--Lien du site FontAwesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!--Feuille de style Sass-->
   <link rel="stylesheet" href="sass/style.css">
 </head>
 
@@ -14,13 +16,15 @@
   <div class="Loader">
     <div class="Loader-animation"></div>
   </div>
+<!--Header de l'accueil-->
   <header>
     <div class="title">
-      <div class=logo--header><img class="logo--header--img logo--header--img--accueil" src="images/logo/ohmyfood.png">
+      <div class=logo--header><img class="logo--header--img logo--header--img--accueil" src="images/logo/ohmyfood.png"
+          alt="">
       </div>
       <div class=header--bloc>
         <div class="localisation"><span class="localisation--icone"><i class="fas fa-map-marker-alt"></i></span>
-          <p class="localisation--map">Paris,Belleville</i></p>
+          <p class="localisation--map">Paris,Belleville</p>
         </div>
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception ,séléctionnés par nos soins.</p>
@@ -28,9 +32,13 @@
       </div>
     </div>
   </header>
+
+<!--Main incluant tout jusqu'au footer-->
   <main>
+    <!--Section "Fonctionnement du site"-->
     <section class=howitworks>
-      <h1>Fonctionnement</h1>
+      <h2>Fonctionnement</h2>
+      <!--Changement de couleur de fond et sur les icones sur le hover-->
       <div class="Big-steps-f">
         <div class=steps>
           <div class="steps--number">1</div>
@@ -51,23 +59,25 @@
       </div>
 
     </section>
+<!--Les restaurant disponibles-->
 
     <section class=Restaurants>
-      <h1>Restaurants</h1>
+      <h2>Restaurants</h2>
       <div class="all-restau">
         <div class=case_restau>
-          <div class=image_restaurant><a href="lapalettedugout.html"><img class="img_rest"
-                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
-
+          <div class=image_restaurant><img class="img_rest"
+              src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
           </div>
           <div class="description--case">
+            <!--Animation sur le coeur-->
             <div class="description--case--heart">
-              <h3>La palette du goût</h3>
-              <p>Ménilmontant</p>
+              <a href="lapalettedugout.html">
+                <h3>La palette du goût</h3>
+                <p>Ménilmontant</p>
               </a>
               <div class=heart_menu>
-                <div class=heartmain><i class="far fa-heart fa-2x icon-b"></i></div>
-                <div class=heartfull><i class="fas fa-heart fa-2x icon-a "></i></div>
+                <div class=heartmain><i class="far fa-heart fa-2x icon-d"></i></div>
+                <div class=heartfull><i class="fas fa-heart fa-2x icon-e "></i></div>
               </div>
             </div>
           </div>
@@ -75,35 +85,34 @@
 
 
         <div class=case_restau>
-          <div class=image_restaurant><a href="lanoteenchantee.html"><img class="img_rest"
-                src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
-          </div>
+          <div class=image_restaurant><img class="img_rest" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+              alt=""></div>
           <div class="description--case">
             <div class="description--case--heart">
+              <a href="lanoteenchantee.html">
               <h3>La note enchantée</h3>
-              <p>Charonne</p>
-              </a>
-
+              <p>Charonne</p></a>
               <div class=heart_menu>
-                <div class=heartmain><i class="far fa-heart fa-2x icon-b"></i></div>
-                <div class=heartfull><i class="fas fa-heart fa-2x icon-a "></i></div>
+                <div class=heartmain><i class="far fa-heart fa-2x icon-d"></i></div>
+                <div class=heartfull><i class="fas fa-heart fa-2x icon-e "></i></div>
               </div>
             </div>
           </div>
         </div>
 
         <div class=case_restau>
-          <div class=image_restaurant><a href="menualafrancaise.html"><img class="img_rest"
-                src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+          <div class=image_restaurant><img class="img_rest"
+              src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
           </div>
           <div class="description--case">
             <div class="description--case--heart">
-              <h3>À la française</h3>
-              <p>Cité Rouge</p>
+              <a href="menualafrancaise.html">
+                <h3>À la française</h3>
+                <p>Cité Rouge</p>
               </a>
               <div class=heart_menu>
-                <div class=heartmain><i class="far fa-heart fa-2x icon-b"></i></div>
-                <div class=heartfull><i class="fas fa-heart fa-2x icon-a "></i></div>
+                <div class=heartmain><i class="far fa-heart fa-2x icon-d"></i></div>
+                <div class=heartfull><i class="fas fa-heart fa-2x icon-e "></i></div>
               </div>
             </div>
           </div>
@@ -111,17 +120,18 @@
 
 
         <div class=case_restau>
-          <div class=image_restaurant><a href="Ledelicedesens.html"><img class="img_rest"
-                src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+          <div class=image_restaurant><img class="img_rest"
+              src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
           </div>
           <div class="description_case">
             <div class="description--case--heart">
-              <h3>Le délice des sens</h3>
-              <p>Folie-Méricourt</p>
+              <a href="Ledelicedesens.html">
+                <h3>Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
               </a>
               <div class=heart_menu>
-                <div class=heartmain><i class="far fa-heart fa-2x icon-b"></i></div>
-                <div class=heartfull><i class="fas fa-heart fa-2x icon-a "></i></div>
+                <div class=heartmain><i class="far fa-heart fa-2x icon-d"></i></div>
+                <div class=heartfull><i class="fas fa-heart fa-2x icon-e "></i></div>
               </div>
             </div>
           </div>
@@ -130,9 +140,9 @@
     </section>
 
   </main>
-
+<!--Le footer contenant le lien "contact"-->
   <footer>
-    <img src="images/logo/ohmyfood@2x.svg">
+    <img src="images/logo/ohmyfood@2x.svg" alt="">
     <ul>
       <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
       <li><i class="fas fa-handshake"></i>Devenir partenaire</li>
