@@ -745,10 +745,10 @@ footer a[href^="mailto:"] {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .menu .case_dishes {
+  .menu .big_case {
     width: 300px;
   }
-  .menu .case_dishes h2 {
+  .menu .big_case h2 {
     font-size: 5px;
   }
   .menu .command-button {
