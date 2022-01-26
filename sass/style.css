@@ -394,43 +394,47 @@ section {
 }
 
 .menu .title_dishes {
-  width: 80%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .menu .case_dishes {
+  width: 100%;
+}
+
+.menu .big_case {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   line-height: 1;
   border: 1px transparent;
   font-size: 16px;
-  padding: 2px 1px 0px 10px;
+  padding: 0px 1px 0px 10px;
   border-radius: 10px;
   margin-bottom: 13px;
   background: white;
   -webkit-box-shadow: 2px 0px 5px 0px #6b6b6b;
           box-shadow: 2px 0px 5px 0px #6b6b6b;
-  -webkit-animation-name: fadein;
-          animation-name: fadein;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
   opacity: 0;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  height: 90px;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-.menu .case_dishes .Price_and_description {
+.menu .Price_and_description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 14px;
+  font-size: 12px;
+  width: 90%;
 }
 
-.menu .case_dishes .Price_and_description .price {
+.menu .Price_and_description .price {
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,63 +444,117 @@ section {
 
 @-webkit-keyframes apparation {
   from {
-    max-width: 0px;
+    -webkit-transform: translateX(112px);
+            transform: translateX(112px);
   }
   to {
-    max-width: 80px;
+    -webkit-transform: translate(-85%);
+            transform: translate(-85%);
   }
 }
 
 @keyframes apparation {
   from {
-    max-width: 0px;
+    -webkit-transform: translateX(112px);
+            transform: translateX(112px);
   }
   to {
-    max-width: 80px;
+    -webkit-transform: translate(-85%);
+            transform: translate(-85%);
+  }
+}
+
+@-webkit-keyframes max-widtha {
+  from {
+    max-width: 100%;
+  }
+  to {
+    max-width: 72%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@keyframes max-widtha {
+  from {
+    max-width: 100%;
+  }
+  to {
+    max-width: 72%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
 .check {
-  position: relative;
-  bottom: 20px;
-  max-width: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: chartreuse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99E2D0;
+  border-radius: 25px;
+  width: 95px;
+  margin-right: -122px;
 }
 
-.case_dishes:hover .check {
-  -webkit-animation: apparation 1s linear forwards;
-          animation: apparation 1s linear forwards;
+.fa-check-circle {
+  color: white;
 }
 
-.case_dishes1 {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+.big_case:hover .Price_and_description {
+  -webkit-animation: max-widtha 1s;
+          animation: max-widtha 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.big_case:hover .title_dishes {
+  -webkit-animation: max-widtha 830ms;
+          animation: max-widtha 830ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.case_dishes2 {
-  -webkit-animation-delay: 250ms;
-          animation-delay: 250ms;
+.big_case:hover .check {
+  -webkit-animation: apparation 820ms linear forwards;
+          animation: apparation 820ms linear forwards;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.case_dishes3 {
-  -webkit-animation-delay: 350ms;
-          animation-delay: 350ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.big_case:hover .check .fa-check-circle {
+  -webkit-animation: rotation 800ms linear 200ms;
+          animation: rotation 800ms linear 200ms;
 }
 
-.case_dishes4 {
-  -webkit-animation-delay: 450ms;
-          animation-delay: 450ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.big_case1 {
+  -webkit-animation: fadein 2s linear 100ms 1 forwards;
+          animation: fadein 2s linear 100ms 1 forwards;
+}
+
+.big_case2 {
+  -webkit-animation: fadein 2s linear 250ms 1 forwards;
+          animation: fadein 2s linear 250ms 1 forwards;
+}
+
+.big_case3 {
+  -webkit-animation: fadein 2s linear 350ms 1 forwards;
+          animation: fadein 2s linear 350ms 1 forwards;
+}
+
+.big_case4 {
+  -webkit-animation: fadein 2s linear 450ms 1 forwards;
+          animation: fadein 2s linear 450ms 1 forwards;
 }
 
 footer {

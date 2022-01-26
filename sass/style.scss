@@ -325,79 +325,80 @@ section {
         width: 85%;
         padding: 5%;
     }
-    .title_dishes{width: 80%;}
-
-    .case_dishes {
+    .title_dishes{width: 100%;overflow: hidden;}
+.case_dishes{width: 100%;}
+    .big_case {
+        display: flex;
         line-height: 1;
         border: 1px transparent;
         font-size: 16px;
-        padding: 2px 1px 0px 10px;
+        padding: 0px 1px 0px 10px;
         border-radius: 10px;
         margin-bottom: 13px;
         background: white;
         box-shadow: 2px 0px 5px 0px rgb(107, 107, 107);
-        animation-name: fadein;
-        animation-duration: 2s;
         opacity: 0;
         animation-iteration-count: 1;
         overflow: hidden;
+        animation-fill-mode: forwards;
+}
+.Price_and_description {
+    @include flexbox-space;
+    font-size: 12px;
+    width: 90%;
+    & .price {
+        font-weight: bold;
+        display: flex;
+        justify-self: end;
+    }
+}
+}
+
+@keyframes apparation{from{transform:translateX(112px);}
+to{transform: translate(-85%);}}
+
+@keyframes max-widtha {from{max-width:100%;}
+to{max-width: 72%;overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;}}
+.check{display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary;
+    border-radius: 25px;
+    width: 95px;margin-right: -122px;}
+
+
+.fa-check-circle{color:white;}
+.big_case:hover {
+    .Price_and_description{    animation: max-widtha 1s;
+        animation-fill-mode: forwards;overflow:hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
-        height: 90px;
-        .Price_and_description {
-            @include flexbox-space;
-            font-size: 14px;
-            & .price {
-                font-weight: bold;
-                display: flex;
-                justify-self: end;
-            }
-        }
-    }
-}
-
-@keyframes apparation {
-    from {
-        max-width: 0px;
-    }
-
-    to {
-        max-width: 80px;
-    }
-}
-
-.check {
-    position: relative;
-    bottom: 20px;
-    max-width: 0px;
-    display: flex;
-    background: chartreuse;
-}
-.case_dishes:hover {
+        white-space: nowrap;}
+        .title_dishes{animation:max-widtha 830ms ;
+        animation-fill-mode: forwards;}
     .check {
-        animation: apparation 1s linear forwards
+        animation:apparation 820ms linear forwards;
+        animation-fill-mode: forwards;
+        .fa-check-circle{animation: rotation 800ms linear 200ms;}
     }
+    
 }
 
-.case_dishes1 {
-    animation-delay: 100ms;
-    animation-fill-mode: forwards;
+.big_case1 {
+    animation:fadein 2s linear 100ms 1 forwards;
 }
 
-.case_dishes2 {
-    animation-delay: 250ms;
-
-    animation-fill-mode: forwards;
+.big_case2 {
+    animation:fadein 2s linear 250ms 1 forwards;
 }
 
-.case_dishes3 {
-    animation-delay: 350ms;
-    animation-fill-mode: forwards;
+.big_case3 {
+    animation:fadein 2s linear 350ms 1 forwards;
 }
 
-.case_dishes4 {
-    animation-delay: 450ms;
-    animation-fill-mode: forwards;
+.big_case4 {
+    animation:fadein 2s linear 450ms 1 forwards;
 }
 
 
