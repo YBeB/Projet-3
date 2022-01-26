@@ -325,8 +325,16 @@ section {
         width: 85%;
         padding: 5%;
     }
-    .title_dishes{width: 100%;overflow: hidden;}
-.case_dishes{width: 100%;}
+
+    .title_dishes {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .case_dishes {
+        width: 100%;
+    }
+
     .big_case {
         display: flex;
         line-height: 1;
@@ -341,64 +349,98 @@ section {
         animation-iteration-count: 1;
         overflow: hidden;
         animation-fill-mode: forwards;
-}
-.Price_and_description {
-    @include flexbox-space;
-    font-size: 12px;
-    width: 90%;
-    & .price {
-        font-weight: bold;
-        display: flex;
-        justify-self: end;
+    }
+
+    .Price_and_description {
+        @include flexbox-space;
+        font-size: 12px;
+        width: 90%;
+
+        & .price {
+            font-weight: bold;
+            display: flex;
+            justify-self: end;
+        }
     }
 }
+
+@keyframes apparation {
+    from {
+        transform: translateX(112px);
+    }
+
+    to {
+        transform: translate(-85%);
+    }
 }
 
-@keyframes apparation{from{transform:translateX(112px);}
-to{transform: translate(-85%);}}
+@keyframes max-widtha {
+    from {
+        max-width: 100%;
+    }
 
-@keyframes max-widtha {from{max-width:100%;}
-to{max-width: 72%;overflow:hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;}}
-.check{display: flex;
+    to {
+        max-width: 72%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.check {
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: $color-tertiary;
     border-radius: 25px;
-    width: 95px;margin-right: -122px;}
+    width: 95px;
+    margin-right: -122px;
+}
 
 
-.fa-check-circle{color:white;}
+.fa-check-circle {
+    color: white;
+}
+
 .big_case:hover {
-    .Price_and_description{    animation: max-widtha 1s;
-        animation-fill-mode: forwards;overflow:hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;}
-        .title_dishes{animation:max-widtha 830ms ;
-        animation-fill-mode: forwards;}
-    .check {
-        animation:apparation 820ms linear forwards;
+    .Price_and_description {
+        animation: max-widtha 1s;
         animation-fill-mode: forwards;
-        .fa-check-circle{animation: rotation 800ms linear 200ms;}
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
-    
+
+    .title_dishes {
+        animation: max-widtha 830ms;
+        animation-fill-mode: forwards;
+    }
+
+    .check {
+        animation: apparation 820ms linear forwards;
+        animation-fill-mode: forwards;
+
+        .fa-check-circle {
+            animation: rotation 800ms linear 200ms;
+        }
+    }
+
 }
 
 .big_case1 {
-    animation:fadein 2s linear 100ms 1 forwards;
+    animation: fadein 2s linear 100ms 1 forwards;
 }
 
 .big_case2 {
-    animation:fadein 2s linear 250ms 1 forwards;
+    animation: fadein 2s linear 250ms 1 forwards;
 }
 
 .big_case3 {
-    animation:fadein 2s linear 350ms 1 forwards;
+    animation: fadein 2s linear 350ms 1 forwards;
 }
 
 .big_case4 {
-    animation:fadein 2s linear 450ms 1 forwards;
+    animation: fadein 2s linear 450ms 1 forwards;
 }
 
 
@@ -560,10 +602,14 @@ $breakpoint-pc:991px;
         }
 
         .big_case {
-            width: 300px;
+            width: 280px;
 
             h2 {
                 font-size: 5px;
+            }
+
+            h3 {
+                font-size: 17px;
             }
         }
 
