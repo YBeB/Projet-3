@@ -564,8 +564,6 @@ section {
 .big_case:hover h3 {
   -webkit-animation: max-widtha 1s;
           animation: max-widtha 1s;
-  -webkit-animation-delay: 718ms;
-          animation-delay: 718ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
