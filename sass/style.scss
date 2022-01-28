@@ -196,7 +196,7 @@ a:link {
     display: flex;
     flex-direction: column;
     ;
-    line-height: 5px;
+    line-height: 6px;
     width: 97%;
     margin-bottom: 30px;
     background-color: white;
@@ -344,8 +344,7 @@ section {
     }
 
     .title_dishes {
-        width: 100%;
-        overflow: hidden;
+        width: 300px;
     }
 
     .case_dishes {
@@ -358,7 +357,7 @@ section {
         border: 1px transparent;
         font-size: 16px;
         padding: 0px 1px 0px 10px;
-        border-radius: 10px;
+        border-radius: 20px;
         margin-bottom: 13px;
         background: white;
         box-shadow: 2px 0px 5px 0px rgb(107, 107, 107);
@@ -371,7 +370,7 @@ section {
     .Price_and_description {
         @include flexbox-space;
         font-size: 12px;
-        width: 90%;
+        width: 100%;
 
         & .price {
             font-weight: bold;
@@ -393,17 +392,23 @@ section {
 
 @keyframes max-widtha {
     from {
-        max-width: 100%;
+        max-width: 300px;
     }
 
     to {
-        max-width: 72%;
+        max-width: 200px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 }
+@keyframes priceA{    from {
+    transform: translateX(0px);
+}
 
+to {
+    transform: translate(-100px);
+}}
 .check {
     display: flex;
     justify-content: center;
@@ -412,6 +417,7 @@ section {
     border-radius: 25px;
     width: 95px;
     margin-right: -122px;
+    
 }
 
 
@@ -419,29 +425,27 @@ section {
     color: white;
 }
 
-.big_case:hover {
-    .Price_and_description {
-        animation: max-widtha 1s;
-        animation-fill-mode: forwards;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
 
-    .title_dishes {
-        animation: max-widtha 830ms;
+.big_case:hover {
+    h3 {
+        animation: max-widtha 1s;
+        animation-delay:718ms ;
         animation-fill-mode: forwards;
+
     }
+    .description{        animation: max-widtha 1s;
+        animation-fill-mode: forwards;}
+
 
     .check {
-        animation: apparation 820ms linear forwards;
+        animation: apparation 720ms linear forwards;
         animation-fill-mode: forwards;
 
         .fa-check-circle {
             animation: rotation 800ms linear 200ms;
         }
     }
-
+    .price{animation:priceA 1s linear forwards;}
 }
 
 .big_case1 {
@@ -532,7 +536,6 @@ footer {
     overflow: hidden;
     animation: endload 2s linear 3s;
     animation-fill-mode: forwards;
-    display: none;
 }
 
 
@@ -598,9 +601,8 @@ $breakpoint-pc:991px;
     }
 
     .case_restau {
-        width: 35%;
         margin: 10px;
-
+        width: 35%;
     }
 
     footer {
