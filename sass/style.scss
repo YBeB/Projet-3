@@ -375,7 +375,8 @@ section {
         & .price {
             font-weight: bold;
             display: flex;
-            justify-self: end;
+            align-self: center;
+            width: 40px;
         }
     }
 }
@@ -402,13 +403,20 @@ section {
         white-space: nowrap;
     }
 }
-@keyframes priceA{    from {
-    transform: translateX(0px);
+
+@keyframes max-widthb {
+    from {
+        max-width: 50px;
+    }
+
+    to {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: 80px;
+    }
 }
 
-to {
-    transform: translate(-100px);
-}}
 .check {
     display: flex;
     justify-content: center;
@@ -444,7 +452,7 @@ to {
             animation: rotation 800ms linear 200ms;
         }
     }
-    .price{animation:priceA 1s linear forwards;}
+.price{animation: max-widthb 1s linear forwards;}
 }
 
 .big_case1 {

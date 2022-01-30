@@ -470,7 +470,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-self: end;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 40px;
 }
 
 @-webkit-keyframes apparation {
@@ -519,25 +521,27 @@ section {
   }
 }
 
-@-webkit-keyframes priceA {
+@-webkit-keyframes max-widthb {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    max-width: 50px;
   }
   to {
-    -webkit-transform: translate(-100px);
-            transform: translate(-100px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 80px;
   }
 }
 
-@keyframes priceA {
+@keyframes max-widthb {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    max-width: 50px;
   }
   to {
-    -webkit-transform: translate(-100px);
-            transform: translate(-100px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 80px;
   }
 }
 
@@ -588,8 +592,8 @@ section {
 }
 
 .big_case:hover .price {
-  -webkit-animation: priceA 1s linear forwards;
-          animation: priceA 1s linear forwards;
+  -webkit-animation: max-widthb 1s linear forwards;
+          animation: max-widthb 1s linear forwards;
 }
 
 .big_case1 {
